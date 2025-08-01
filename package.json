@@ -1,0 +1,13 @@
+{
+  "name": "rewell-ai-vercel",
+  "version": "1.0.0",
+  "description": "Backend for Rewell AI to handle Gemini API calls.",
+  "main": "api/generate.js",
+  "scripts": {
+    "start": "node api/generate.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.14.1",
+    "express": "^4.19.2"
+  }
+}
