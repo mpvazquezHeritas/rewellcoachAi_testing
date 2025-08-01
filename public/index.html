@@ -41,7 +41,6 @@
 </head>
 <body class="text-slate-700">
 
-    <!-- Pantalla de Autenticación -->
     <div id="auth-screen" class="min-h-screen flex items-center justify-center p-4" style="background-color: #0c1e3e;">
         <div class="w-full max-w-md mx-auto bg-white rounded-2xl shadow-xl p-8">
             <div class="text-center mb-8">
@@ -77,7 +76,6 @@
         </div>
     </div>
 
-    <!-- Pantalla de Carga de Archivos -->
     <div id="upload-screen" class="min-h-screen relative flex items-center justify-center p-4 pb-24" style="background-color: #0c1e3e;">
         <div class="w-full max-w-5xl mx-auto bg-white rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden">
             <div class="w-full md:w-5/12 bg-slate-50 flex justify-center items-center p-8 md:p-12">
@@ -112,7 +110,6 @@
         </footer>
     </div>
     
-    <!-- Historial de Reportes -->
     <div id="history-screen" class="min-h-screen bg-slate-50 py-12 px-4">
         <div class="max-w-4xl mx-auto">
              <div class="text-center mb-8">
@@ -126,14 +123,11 @@
                 Si tienes un nuevo reporte de Rewell (por ej, Evolución continua microbioma) o si han cambiado las condiciones del cuestionario (por ej, una nueva condición diagnosticada, un cambio de dieta drástico o la incorporación de suplementos) puedes generar un nuevo plan de hábitos subiendo los nuevos reportes y contestando de nuevo el cuestionario. Nuestro coach de Rewell IA hará un gran trabajo.
             </p>
             <div id="history-list" class="space-y-4">
-                <!-- Los reportes se cargarán aquí dinámicamente -->
-            </div>
+                </div>
         </div>
     </div>
 
-    <!-- Cuestionario -->
     <div id="questionnaire-screen" class="min-h-screen bg-slate-50 py-12 px-4">
-        <!-- El contenido del cuestionario no cambia, se omite por brevedad -->
         <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg">
             <div class="flex justify-center mb-6">
                 <img src="https://app.getrewell.com/assets/loginRewellLogoXXXL-641263e2.png" alt="Logo de Rewell" class="max-w-[125px] w-full h-auto">
@@ -141,7 +135,6 @@
             <h1 class="text-2xl md:text-3xl font-bold text-slate-800 mb-2 text-center">Cuestionario de Bienestar</h1>
             <p class="text-slate-600 mb-8 text-center">Tus respuestas nos ayudarán a personalizar aún más tus recomendaciones.</p>
             <form id="wellness-form" class="space-y-4">
-                <!-- Pregunta 1: Alergias -->
                 <div class="accordion-item border border-slate-200 rounded-lg">
                     <button type="button" class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
                         <span>1. ¿Tenés alguna intolerancia o alergia alimentaria?</span>
@@ -173,7 +166,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Pregunta 2: Síntomas -->
                 <div class="accordion-item border border-slate-200 rounded-lg">
                     <button type="button" class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
                         <span>2. ¿Presentás alguno de estos síntomas de manera frecuente?</span>
@@ -197,7 +189,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Pregunta 3: Dieta -->
                 <div class="accordion-item border border-slate-200 rounded-lg">
                     <button type="button" class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
                         <span>3. ¿Cómo definirías tu tipo de dieta habitual?</span>
@@ -217,7 +208,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Pregunta 4: Condiciones Médicas -->
                 <div class="accordion-item border border-slate-200 rounded-lg">
                     <button type="button" class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
                         <span>4. ¿Alguna vez te han diagnosticado alguna de estas condiciones médicas?</span>
@@ -247,7 +237,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Pregunta 5: Suplementos -->
                 <div class="accordion-item border border-slate-200 rounded-lg">
                     <button type="button" class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-slate-700 hover:bg-slate-50">
                         <span>5. En una semana típica, ¿cuáles de estas vitaminas y/o suplementos tomás?</span>
@@ -286,7 +275,6 @@
         </div>
     </div>
 
-    <!-- Pantalla de Carga -->
     <div id="loading-screen" class="min-h-screen flex items-center justify-center p-4 text-center">
         <div>
             <div class="flex justify-center items-center space-x-2 mb-6">
@@ -299,12 +287,9 @@
         </div>
     </div>
 
-    <!-- Pantalla de Resultados -->
     <div id="results-screen">
-        <!-- El contenido se generará aquí dinámicamente -->
-    </div>
+        </div>
 
-    <!-- Firebase SDK -->
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
@@ -316,12 +301,12 @@
         // ==================================================================
         // TODO: Reemplaza este objeto con la configuración de tu propio proyecto de Firebase.
         const firebaseConfig = {
-          apiKey: "AIzaSyDkORryISKbYW5xbi1hkbSlUR8xS_VGMZI",
-          authDomain: "rewell-ai-app.firebaseapp.com",
-          projectId: "rewell-ai-app",
-          storageBucket: "rewell-ai-app.firebasestorage.app",
-          messagingSenderId: "1004160160765",
-          appId: "1:1004160160765:web:e029e012e5e4e0638f7f94"
+            apiKey: "TU_API_KEY_DE_FIREBASE",
+            authDomain: "TU_AUTH_DOMAIN",
+            projectId: "TU_PROJECT_ID",
+            storageBucket: "TU_STORAGE_BUCKET",
+            messagingSenderId: "TU_MESSAGING_SENDER_ID",
+            appId: "TU_APP_ID"
         };
 
         // Initialize Firebase
@@ -626,15 +611,14 @@
             };
 
             const handleAnalysis = async () => {
-                // WARNING: Exposing API keys client-side is a security risk.
-                const apiKey = "AIzaSyASKTV6JD2FfHqH7HTKbeXVnmn2pQJ_OvQ"; 
-                
                 showScreen('loading');
                 loadingTitle.textContent = "Analizando tu reporte y cuestionario...";
                 loadingText.textContent = "El análisis puede demorar entre 3 y 5 minutos. ¡Puedes ir a buscar un café si quieres!";
 
                 try {
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+                    // La llamada a la API ahora va a nuestra función Netlify/Vercel
+                    const apiUrl = "/.netlify/functions/geminiRequest"; 
+                    
                     let parts = [];
                     const questionnaireDataForGemini = getQuestionnaireData(false);
                     const prompt = `Actúa como un coach de salud y diseñador de UI/UX experto en nutrigenética y microbioma intestinal. Tu tarea es analizar un reporte de REWELL en PDF (que contiene genética y microbioma) Y las respuestas a un cuestionario de salud. Debes generar un panel de bienestar visualmente atractivo, integrado, accionable y ALTAMENTE PERSONALIZADO.`;
@@ -690,10 +674,21 @@
                     parts.push({ text: commonInstructions });
 
                     const payload = { contents: [{ role: "user", parts: parts }] };
-                    const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-                    if (!response.ok) throw new Error(`Error de la API: ${response.statusText}`);
+
+                    // Enviamos el payload a nuestra función de backend
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`Error del servidor: ${errorData.message || response.statusText}`);
+                    }
                     
                     const result = await response.json();
+
                     if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts.length > 0) {
                         let htmlContent = result.candidates[0].content.parts[0].text.replace(/```html/g, '').replace(/```/g, '');
                         
@@ -712,7 +707,10 @@
                         screens.results.innerHTML = htmlContent;
                         showScreen('results');
                         initializeResultsScreen();
-                    } else {
+                    } else if (result.error) {
+                        throw new Error(`Error de la API de Gemini: ${result.error.message}`);
+                    }
+                    else {
                         throw new Error("Respuesta inesperada o vacía de la API.");
                     }
                 } catch (error) {
