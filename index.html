@@ -311,9 +311,8 @@
         import { getFirestore, collection, addDoc, getDocs, query, where, orderBy, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
         // ==================================================================
-        // ===== CONFIGURACIÓN DE FIREBASE - ¡REEMPLAZAR! =====
+        // ===== CONFIGURACIÓN DE FIREBASE =====
         // ==================================================================
-        // TODO: Reemplaza este objeto con la configuración de tu propio proyecto de Firebase.
         const firebaseConfig = {
           apiKey: "AIzaSyDkORryISKbYW5xbi1hkbSlUR8xS_VGMZI",
           authDomain: "rewell-ai-app.firebaseapp.com",
@@ -334,7 +333,7 @@
         pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js`;
 
         document.addEventListener('DOMContentLoaded', () => {
-            // Screen elements
+            // ... (el resto del script no cambia, se omite por brevedad)
             const screens = {
                 auth: document.getElementById('auth-screen'),
                 upload: document.getElementById('upload-screen'),
